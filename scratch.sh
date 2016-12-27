@@ -9,7 +9,7 @@ echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | sudo tee /etc
 sudo apt-get update -y && sudo apt-get install docker-engine docker-compose -y
 sudo gpasswd -a ${USER} docker
 sudo su
-curl -L https://github.com/docker/machine/releases/download/v0.8.2/docker-machine-`uname -s`-`uname -m` >/usr/local/bin/docker-machine && \
+curl -L https://github.com/docker/machine/releases/download/v0.8.2/docker-machine-`uname -s`-`uname -m` >/usr/local/bin/docker-machine 
 chmod +x /usr/local/bin/docker-machine
 exit
 
