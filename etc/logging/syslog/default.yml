@@ -67,10 +67,7 @@ sonar-mysql:
     tag: "sonar-mysql"
 
 sonar:
-  log_driver: "syslog"
-  log_opt:
-    syslog-address: "udp://${LOGSTASH_HOST}:25826"
-    tag: "sonar"
+  log_driver: "json-file"
 
 jenkins:
   log_driver: "syslog"
