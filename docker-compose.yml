@@ -4,8 +4,8 @@
 proxy:
   container_name: proxy
   restart: always
-  image: accenture/adop-nginx:0.2.0
-  #build: ../images/docker-nginx/
+  #image: accenture/adop-nginx:latest
+  build: ./adop-nginx/
   net: ${CUSTOM_NETWORK_NAME}
   ports:
     - "80:80"
@@ -176,7 +176,7 @@ sonar-mysql:
 sonar:
   container_name: sonar
   restart: always
-  image: accenture/adop-sonar:0.2.0
+  image: accenture/adop-sonar:0.3.1
   #build: ../images/docker-sonar/
   net: ${CUSTOM_NETWORK_NAME}
   expose:
@@ -200,7 +200,7 @@ sonar:
 jenkins:
   container_name: jenkins
   restart: always
-  image: accenture/adop-jenkins:0.2.0
+  image: accenture/adop-jenkins:latest
   #build: ../images/docker-jenkins/
   net: ${CUSTOM_NETWORK_NAME}
   ports:
